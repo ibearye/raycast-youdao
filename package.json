@@ -1,0 +1,102 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "youdao",
+  "version": "0.1.0",
+  "title": "有道翻译",
+  "description": "基于有道智云的快速翻译工具",
+  "icon": "icon.png",
+  "author": "Bearye <ibearye@163.com> (https://bearye.cn)",
+  "keywords": [
+    "raycast",
+    "extension",
+    "raycast extension",
+    "tools",
+    "translation",
+    "translate",
+    "youdao",
+    "translation tools"
+  ],
+  "categories": [
+    "Developer Tools",
+    "Other"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "index",
+      "title": "有道翻译",
+      "subtitle": "快速翻译工具",
+      "description": "基于有道智云的快速翻译工具",
+      "mode": "view",
+      "keywords": [
+        "yd"
+      ]
+    }
+  ],
+  "preferences": [
+    {
+      "name": "app_key",
+      "type": "textfield",
+      "required": true,
+      "title": "APP Key",
+      "description": "你可以从这里获取到 APP KEY https://ai.youdao.com/console/",
+      "placeholder": "请输入有道智云 APP Key"
+    },
+    {
+      "name": "app_secret",
+      "type": "password",
+      "required": true,
+      "title": "APP Secret",
+      "description": "你可以从这里获取到 APP Secret at https://ai.youdao.com/console/",
+      "placeholder": "请输入有道智云 APP Secret"
+    },
+    {
+      "name": "locale",
+      "type": "dropdown",
+      "title": "语言",
+      "required": false,
+      "data": [
+        {
+          "title": "跟随系统",
+          "value": "auto"
+        },
+        {
+          "title": "中文",
+          "value": "zh-CN"
+        },
+        {
+          "title": "English",
+          "value": "en"
+        }
+      ],
+      "default": "auto",
+      "description": "请选择界面语言，更改语言后请重新运行"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.31.0",
+    "abort-controller": "^3.0.0",
+    "i18n": "^0.14.2",
+    "node-fetch": "^3.2.3",
+    "os-locale": "^6.0.2",
+    "play-sound": "^1.1.5"
+  },
+  "devDependencies": {
+    "@types/i18n": "^0.13.2",
+    "@types/play-sound": "^1.1.0",
+    "@types/react": "^17.0.28",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "prettier": "^2.5.1",
+    "react-devtools": "^4.19.2",
+    "typescript": "^4.4.3"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint"
+  }
+}
