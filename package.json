@@ -67,6 +67,10 @@
         {
           "title": "English",
           "value": "en"
+        },
+        {
+          "title": "关闭本地化/Disable localization",
+          "value": "disable"
         }
       ],
       "default": "auto",
@@ -94,7 +98,7 @@
     "typescript": "^4.4.3"
   },
   "scripts": {
-    "build": "ray build -e dist",
+    "build": "ray build -e dist -o dist",
     "dev": "ray develop",
     "fix-lint": "ray lint --fix",
     "lint": "ray lint"
